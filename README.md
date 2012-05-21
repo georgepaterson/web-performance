@@ -14,9 +14,9 @@
 
 ## Client performance techniques
 
-### External files
-
 ### HTTP requests
+
+### CSS and JavaScript external files
 
 ### Code quality
 
@@ -35,6 +35,21 @@
 ### JavaScript render logic
 
 ### Asynchronous image loading
+
+Inline images that are not initially visible to the user can present an additional HTTP and resource request before a Web page completes loading. 
+
+One possible solution to avoid this is to remove the image source and set it as a data attribute. JavaScript can then be used to set the image source from the data attribute on a triggered event. A classname common to all asynchronously loaded images can be used to easily reference the JavaScript enhanced images.
+
+	<img class="asynchronous" data-src="/images/example.jpg" alt="An example image" />
+	
+If a non-JavaScript fallback is required the same image can be wrapped in a noscript tag, the classname used to identify all asynchronously loaded images can then be used to hide the JavaScript enhanced images.
+	
+	<img class="asynchronous" data-src="/images/example.jpg" alt="An example image" />
+	<noscript><img src="/images/example.jpg" alt="An example image"  /></noscript>
+	
+Standard JavaScript events can then be used to set the source of the required image. The exact event trigger should be chosen on a per module basis.
+	
+#### Empty image source
 
 ### Image sprites
 
