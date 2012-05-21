@@ -2,6 +2,14 @@
 
 ## Performance and usability
 
+Web response times and usability is based on psychological research by Miller 1968[1](#note-1) and Card et al. 1991[2](#note-2). Referencing Table 3 Human time constants for tuning cognitive co-processor of Card et al. we have three constants.
+
+* The perceptual processing time constant - 0.1 seconds. A 0.1 second response time creates the illusion of an instant response time. The user will not perceive a task being completed.
+* The immediate response time constant - 1 second. In a 1 second response time the user does not lose confidence in the system waiting for a response, there is no need to inform the user that a task is being processed. An action above 1 second should have an indicator that a task is being processed.
+* The unit task time constant - 10 seconds. A 10 second response time is the upper limit before a user loses confidence in the system performing a desired action. The user will need an indicator that the task is being processed and where possible an indicator of when the task should be finished allowing the user to complete an alternative task 
+
+Using these constants as reference for Web page response times, we can conclude that although all browsers provide a task indicator, a response time of under 10 seconds is preferred, with an optimal response time near 1 second.  
+
 ## Measuring performance
 
 ### Client versus server performance
@@ -57,13 +65,14 @@ Although the HTML5 specification has changed the description of the image src to
 
 ### Image sprites
 
-
-
 #### Base64 encoded images
 
 ### Conditional comment blocking
 
 ## Notes
+
+1. Miller, R. B. (1968). Response time in man-computer conversational transactions. Proc. AFIPS Fall Joint Computer Conference Vol. 33, 267-277. <a name="note-1" />
+2. Card, S. K., Robertson, G. G., and Mackinlay, J. D. (1991). The information visualizer: An information workspace. Proc. ACM CHI'91 Conf. (New Orleans, LA, 28 April-2 May), 181-188. <a name="note-2" />
 
 ## Resources
 
