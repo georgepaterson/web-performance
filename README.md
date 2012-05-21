@@ -32,7 +32,7 @@
 
 ### Asynchronous JavaScript loading
 
-### JavaScript render logic
+### Reduce JavaScript rendering
 
 ### Asynchronous image loading
 
@@ -51,7 +51,13 @@ Standard JavaScript events can then be used to set the source of the required im
 	
 #### Empty image source
 
+An empty image source can cause the browser to make a request for the relative page, generating a significant performance hit.
+
+Although the HTML5 specification has changed the description of the image src to avoid this, it is recommended that an empty image src is avoided.
+
 ### Image sprites
+
+
 
 #### Base64 encoded images
 
@@ -64,3 +70,5 @@ Standard JavaScript events can then be used to set the source of the required im
 1. [W3C Web Performance Working Group](http://www.w3.org/2010/webperf/)
 2. [Response Times: The 3 Important Limits](http://www.useit.com/papers/responsetime.html)
 3. [Repaint and reflow](http://dev.opera.com/articles/view/efficient-javascript/?page=3#reflow)
+4. [Empty image src can destroy your site](http://www.nczonline.net/blog/2009/11/30/empty-image-src-can-destroy-your-site/)
+5. [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html)
